@@ -17,7 +17,17 @@
 
 ---
 
-## 2. Key Differentiation & Functional Scope
+## 2. Standalone Thick-Client Packaging Topology
+
+Below is the isometric 3D volumetric tensor block diagram illustrating the air-gapped thick-client distribution:
+
+#### Figure 1: Power-Monitor Desktop Thick-Client Distribution Topology
+*Standalone industrial PC packaging combining local Snap7 telemetry polling, self-contained SQLite backend services, go2rtc VMAF quality monitoring, and the desktop Electron shell.*
+![Power Monitor Distribution 3D](docs/figures/1_power_monitor_distribution_3d.png)
+
+---
+
+## 3. Key Differentiation & Functional Scope
 
 While `Master-Station` is maintained as the primary engineering development trunk for central substation SCADA operations, `Power-Monitor` provides a packaged desktop installation profile:
 
@@ -27,7 +37,7 @@ While `Master-Station` is maintained as the primary engineering development trun
 
 ---
 
-## 3. Upstream Documentation & Reference Links
+## 4. Upstream Documentation & Reference Links
 
 To prevent duplication and maintain documentation integrity, please refer to the primary technical documentation:
 
@@ -42,7 +52,7 @@ To prevent duplication and maintain documentation integrity, please refer to the
 
 ---
 
-## 4. Building the Thick-Client Distribution
+## 5. Building the Thick-Client Distribution
 
 ```bash
 # Clone and build local standalone desktop client
