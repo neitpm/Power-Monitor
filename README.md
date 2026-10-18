@@ -66,3 +66,10 @@ cd Power-Monitor
 ./start-all.sh   # On Linux
 start-all.bat    # On Windows
 ```
+
+---
+
+## 6. Container & Packaging Considerations
+
+Power-Monitor is designed primarily as a packaged desktop client with bundled Electron runtimes for local operator control. For server-side headless multi-container orchestration, please utilize the upstream Docker Compose setup documented in **[`Master-Station / README.md`](../Master-Station/README.md)**.
+
