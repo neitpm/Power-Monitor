@@ -61,8 +61,8 @@ export default function MaintenancePage() {
   const [endDate, setEndDate] = useState('');
 
   const canManageMaintenance = useMemo(() => {
-    // Trạm con không được phép tự tạo/sửa/xóa lịch bảo trì (chỉ đồng bộ từ trạm tổng)
-    return false;
+    const user = authService.getUser();
+    return user?.role === 'admin' || user?.role === 'manager';
   }, []);
 
   const getFirstStationId = useStationStore(s => s.getFirstStationId);

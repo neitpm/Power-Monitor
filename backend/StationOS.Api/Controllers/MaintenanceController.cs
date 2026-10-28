@@ -40,8 +40,8 @@ public class MaintenanceController : ControllerBase
 
     private bool CanManageMaintenance()
     {
-        // Trạm con không được phép tự tạo/sửa/xóa lịch bảo trì (chỉ đồng bộ từ trạm tổng)
-        return false;
+        var role = User.FindFirstValue(ClaimTypes.Role) ?? User.FindFirstValue("role") ?? "";
+        return role == "admin" || role == "manager";
     }
 
     // ── GET /api/v1/maintenance ──────────────────────────────
